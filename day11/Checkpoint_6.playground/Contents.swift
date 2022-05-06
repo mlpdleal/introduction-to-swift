@@ -12,9 +12,14 @@ struct Car {
         
     mutating func changeGears(up: Bool){
         if up {
-            self.currentGear += 1
+            if currentGear < 10 {
+                self.currentGear += 1
+            }
+            
         } else {
-            self.currentGear -= 1
+            if currentGear > 0{
+                self.currentGear -= 1
+            }
         }
     }
 }
